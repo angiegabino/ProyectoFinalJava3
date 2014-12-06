@@ -26,7 +26,7 @@ and open the template in the editor.
             <script>
             $(document).ready(function(){
                 $("cargar-artista").click(function(){
-                    $.getJSON("http://localhost:8090/ProyectoFinalGabino/servicios/artista", function(datos){
+                    $.getJSON("http://localhost:8090/ProyectoFinalGabino/servicios/buscar-artista", function(datos){
                        $("#resultado-artista").html("El album del artista \n\
               "+datos.artista[1].u.nombre +" es el "+datos.album[1].nombre);
                         

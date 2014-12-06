@@ -7,7 +7,7 @@ public class WebAp extends AbstractAnnotationConfigDispatcherServletInitializer 
     
     @Override 
     protected Class<?>[] getRootConfigClasses() {
-            System.out.println("Caragando configuracion de clases config !!");
+            System.out.println("Cargando configuracion de clases config !!");
             return new Class<?>[0];
             }
 
