@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class ControladorPrecio {
     
    @RequestMapping(value = "/precio", method = RequestMethod.GET, headers = {"Accept=Application/json"})
-   public @ResponseBody String todos() throws Exception{ //Preguntar al profesor
+   public @ResponseBody String precio() throws Exception{ 
        DAOPrecioImpl pr = new DAOPrecioImpl();
        
        return pr.obtenerTodos();

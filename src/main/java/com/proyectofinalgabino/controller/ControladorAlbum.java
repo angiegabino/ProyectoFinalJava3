@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 public class ControladorAlbum {
     
-    @RequestMapping(value = "/album", method = RequestMethod.GET, headers = {"Accept=Application/jason"})
-    public @ResponseBody String todos() throws Exception{ //Preguntar al profe
-        DAOAlbumImpl al = new DAOAlbumImpl();
+    @RequestMapping(value = "/album", method = RequestMethod.GET, headers = {"Accept=Application/json"})
+   public @ResponseBody String album() throws Exception{ 
+       DAOAlbumImpl al = new DAOAlbumImpl();
         
         return al.obtenerTodos();
     }
