@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Proyecto Java</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>Busqueda por ID</div>
+        
+        <p>Bienvenido a mi proyecto!!</p>
+        <p>Para empezar oprime el boton y se mostrará el artista elegido con el album correspondiente</p>
+        
+        <input class="form-control" id="bid" placeholder="Da un id">
+        <button class="btn-success" id="cargarArtista"> Enviar </button>
+        <div id="resultadoArtista"></div>
+        
+        <script>
+            $(document).ready(function(){
+                $("#cargarArtista").click(function(){
+                    var miId=$("#bid").val();
+                    $.getJSON("http://localhost:8090/ProyectoFinalGabino/busqueda/" + miId, function(datos){
+                        $("#resultadoArtista").html("Elegiste " + datos.artista + ", el album en venta es: " + datos.album);
+                    });
+                });
+            });
+          
+           
+        </script>
+        
+    </body>
+</html>

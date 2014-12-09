@@ -5,9 +5,21 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Proyecto Java </title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Bienvenido a mi proyecto </h1>
+        
+        <h2> Gabino Meneses Angelica Dafne </h2>
+        
+        <p> Si deseas obtener todos los artistas busca en la URL </p>
+        <p> http://localhost:8090/ProyectoFinalGabino/servicios/artista</p>
+        
+        <p> Si deseas obtener todos los albumnes busca en la URL </p>
+        <p> http://localhost:8090/ProyectoFinalGabino/servicios/album</p>
+        
+        <p> Si deseas obtener todos los precios busca en la URL </p>
+        <p> http://localhost:8090/ProyectoFinalGabino/servicios/precio</p>
+        
     </body>
 </html>

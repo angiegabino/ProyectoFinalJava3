@@ -21,19 +21,23 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>TODO write content</div>
+        <div>Proyecto Java</div>
+        
+        <p>Este es un ejemplo para una busqueda sencilla, realizada con relaciones sql</p>
+        <p>Se buscara un album con su año del album correspondiente</p>
+        
+        <button class="btn btn-success" id="cargarAlbum"> Enviar </button>
+        <div id="resultadoAlbum"></div>
         
             <script>
-            $(document).ready(function(){
-                $("cargar-artista").click(function(){
-                    $.getJSON("http://localhost:8090/ProyectoFinalGabino/servicios/buscar-artista", function(datos){
-                       $("#resultado-artista").html("El album del artista \n\
-              "+datos.artista[1].u.nombre +" es el "+datos.album[1].nombre);
-                        
+                $(document).ready(function(){
+                    $("#cargarAlbum").click(function(){
+                        $.getJSON("http://localhost:8090/ProyectoFinalGabino/servicios/album", function(datos){
+                            $("#resultadoAlbum").html("El año del album de " + datos.artista[0].u.nombre + " es "
+                                    + datos.album[0].u.año);
+                        });
                     });
-                   
                 });
-            });
         </script>
            
         </body>
